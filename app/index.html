@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>AngularJS Routing</title>
+        <!-- https://youtu.be/pDnDcUISz5U -->
+        <link rel="stylesheet" href='../node_modules/bootstrap/dist/css/bootstrap.min.css'>
+        <link rel="stylesheet" href='css/app.css'>
+    </head>
+    <body ng-app='mainApp'>
+
+        <div class='container'>
+            <!-- Title -->
+            <div class='row'>
+                <h1> Single page application</h1>
+            </div>
+            <!-- Navigation -->
+            <div class='row'>
+                <ul class='nav nav-tabs nav-justified'>
+                    <li><a href='#/'>Home</a></li>
+                    <li><a href='#/about'>About</a></li>
+                    <li><a href='#/contact'>Contact</a></li>
+                </ul>
+            </div>
+            <!-- Template content -->
+            <div class='row'>
+                <ng-view></ng-view>
+            </div>
+
+            <!-- copyright -->
+            <div class='row'>
+                All Rights reserved @2017
+            </div>
+        </div>
+
+        
+
+
+
+
+        <script src="../node_modules/angular/angular.min.js"></script>
+        <script src="../node_modules/angular-route/angular-route.min.js"></script>
+        <script src="app.js"></script>
+        <script src="controllers/home.js"></script>
+        <script src="controllers/contact.js"></script>
+        <script src="controllers/about.js"></script>
+        
+        
+    </body>
+</html>
