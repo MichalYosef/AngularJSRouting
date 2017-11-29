@@ -1,0 +1,22 @@
+<div class='container' ng-controller='seaOrLandController'>
+    
+    <div class='row'>
+        <div class='col-centered'>
+            <label>X:</label>
+            <input ng-model='coords.x' type='number' required/>
+            <label>Y:</label>
+            <input ng-model='coords.y' type='number' required/>
+        </div>
+        <botton class='btn btn-success' ng-click='checkCoords()'>Check Sea or Earth!</botton>
+    </div>
+    <div class='row'>
+        <span>
+            <a href="https://onwater.io/" target="_blank">Don't have a clue? Get coords from here...</a>
+        </span>
+    </div>
+    <div class='row' ng-show='gotApiAnswer'>
+        <div class='colorDiv'>
+                <span ng-class="{'bgSea': result === 'sea', 'bgEarth': result === 'earth'}">{{result}}</span>
+        </div>
+    </div>
+</div>

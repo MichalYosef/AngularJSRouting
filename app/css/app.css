@@ -9,3 +9,23 @@ body{
 .ng-valid.ng-dirty{
     border-color: green;
 }
+
+.centered{
+   
+    margin: 0 auto;
+}
+
+.bgSea{
+    background-color: seagreen;
+}
+
+.bgEarth{
+    background-color: brown;
+}
+
+.colorDiv{
+    border: solid 3px;
+    width: 20%;
+    height: 10%;
+}
+

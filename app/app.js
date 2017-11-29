@@ -16,6 +16,14 @@ app.config(function($routeProvider){
         templateUrl: 'views/contact.html',
         controller: 'contactController'
     })
+    .when("/location",{
+        templateUrl: 'views/location.html',
+        controller: 'curLocationCtrl'
+    })
+    .when("/seaOrLand",{
+        templateUrl: 'views/seaOrLand.html',
+        controller: 'seaOrLandController'
+    })
     .otherwise({redirectTo:'/'});
 
 });
