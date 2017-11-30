@@ -1,6 +1,6 @@
 app.service('SeaOrLandService', function($http) {
     
-    var debugMode = true;
+    var debugMode = true; //false;//
 
     this.checkSeaOrLand = function(coords, onSuccess, onError ) {
 
@@ -8,8 +8,8 @@ app.service('SeaOrLandService', function($http) {
             setTimeout(function() {
                 const mockObj = {
                     data: {
-                        "lat": coords.lat,
-                        "lon": coords.lon,
+                        "lat": coords.x,
+                        "lon": coords.y,
                         "water": Math.ceil(Math.random()*10) % 2 == 0
                     }
                 }

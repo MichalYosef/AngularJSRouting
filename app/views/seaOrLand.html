@@ -1,22 +1,33 @@
 <div class='container' ng-controller='seaOrLandController'>
     
     <div class='row'>
-        <div class='col-centered'>
-            <label>X:</label>
+        <div class='spaceVertical'>
+            <label class='spaceHorizontal'>X:</label>
             <input ng-model='coords.x' type='number' required/>
-            <label>Y:</label>
+            <label class='spaceHorizontal'>Y:</label>
             <input ng-model='coords.y' type='number' required/>
+            <div><a href="https://onwater.io/" target="_blank">Don't have a clue? Get coords from here...</a></div>
+            <botton class='btn btn-primary center spaceVertical' ng-click='checkCoords()'>Check Sea or Earth!</botton>
         </div>
-        <botton class='btn btn-success' ng-click='checkCoords()'>Check Sea or Earth!</botton>
+        <hr>       
     </div>
-    <div class='row'>
-        <span>
-            <a href="https://onwater.io/" target="_blank">Don't have a clue? Get coords from here...</a>
-        </span>
-    </div>
-    <div class='row' ng-show='gotApiAnswer'>
-        <div class='colorDiv'>
-                <span ng-class="{'bgSea': result === 'sea', 'bgEarth': result === 'earth'}">{{result}}</span>
+   
+    <div class='row spaceVertical spaceVertical frameBorder'>
+        <div class='col-md-4 col-sm-4'>
+            <div ng-show="result === 'earth'" class='bgEarth height100'>Earth</div>
+        </div>
+        <div class='col-md-4 col-sm-4'>
+            <div class='height100 '>
+                    <p>Total count: {{totalCount}}</p>
+                    <p class='bgSea'>Sea count: {{seaCount}}</p>
+                    <p class='bgEarth'>Earth count: {{earthCount}}</p>
+            </div>
+        </div>
+        <div class='col-md-4 col-sm-4'>
+            <div ng-show="result === 'sea'" class='bgSea height100'>Sea</div>
         </div>
     </div>
 </div>
+
+
+    
