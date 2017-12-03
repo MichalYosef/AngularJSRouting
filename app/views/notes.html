@@ -1,0 +1,28 @@
+<div>
+    <h1>{{title}}</h1>
+</div>
+
+<div class='container' ng-controller='addNoteController'>
+    
+    <div class='row'>
+        <div class='spaceVertical'>
+            
+            <textarea ng-model='note.text' type='textarea'  rows="4" cols="50" required/></textarea>
+            
+            <input ng-model='note.date' type="datetime" required/>
+            
+            <botton class='btn btn-primary center spaceVertical' ng-click='addNote()'>Add Note!</botton>
+        </div>
+        <hr>       
+    </div>
+   
+    <div class='row spaceVertical spaceVertical frameBorder'>
+        <div class='note' ng-repeat="note in notes">
+            <span class="glyphicon glyphicon-remove" ng-click="deleteNote"></span>
+            <div ng-model="note.text"></div>
+            <div ng-model="note.date"></div>     
+            
+        </div>
+        
+    </div>
+</div>

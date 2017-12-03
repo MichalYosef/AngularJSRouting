@@ -3,7 +3,8 @@
     <head>
         <meta charset="utf-8">
         <title>AngularJS Routing</title>
-        <!-- https://youtu.be/pDnDcUISz5U -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href='../node_modules/bootstrap/dist/css/bootstrap.min.css'>
         <link rel="stylesheet" href='css/app.css'>
     </head>
@@ -19,7 +20,7 @@
             <div class='row'>
                 <ul class='nav nav-pills nav-justified'>
                     <li><a href='#!/'>Home</a></li>
-                    <li><a href='#!/about'>About</a></li>
+                    <li><a href='#!/notes'>Notes</a></li>
                     <li><a href='#!/contact'>Contact</a></li>
                     <li><a href='#!/location'>AngularJs Location</a></li>
                     <li><a href='#!/seaOrLand'>ים/יבשה</a></li>
@@ -36,13 +37,16 @@
         
         <script src="../node_modules/angular/angular.min.js"></script>
         <script src="../node_modules/angular-route/angular-route.min.js"></script>
+        
         <script src="app.js"></script>
         <script src="controllers/home.js"></script>
         <script src="controllers/contact.js"></script>
-        <script src="controllers/about.js"></script>
+       
         <script src="controllers/location.js"></script>
         <script src="controllers/seaOrLand.js"></script>
         <script src="services/seaOrLandService.js"></script>
+        <script src="controllers/addNote.js"></script>
+        <script src="services/notesService.js"></script>
         
         
     </body>
